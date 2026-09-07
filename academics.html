@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Programs | Hemanathan University</title>
+  <meta name="description" content="Discover undergraduate, postgraduate, and doctoral research degree programs at Hemanathan University. B.Sc CS, BCA, B.Com, BBA, MCA, MBA, M.Sc, Ph.D.">
+  <link rel="icon" type="image/jpeg" href="assets/images/university_crest.jpg">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- TOP NOTICE BAR -->
+  <div class="top-notice-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span class="notice-badge"><i class="fas fa-bullhorn"></i> Admissions 2026</span>
+        <div class="ticker-content" id="announcementTicker">
+          <span>Admissions Open for Academic Year 2026-27: UG, PG & Ph.D. Programs</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+914428904000" class="top-bar-link"><i class="fas fa-phone-alt"></i> +91 (044) 2890-4000</a>
+        <a href="mailto:admissions@hemanathan.edu.in" class="top-bar-link"><i class="fas fa-envelope"></i> admissions@hemanathan.edu.in</a>
+        <a href="admin.html" class="top-bar-link admin-btn"><i class="fas fa-user-shield"></i> Admin Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="brand-wrapper">
+        <img src="assets/images/university_crest.jpg" alt="Hemanathan University Crest" class="brand-crest">
+        <div class="brand-meta">
+          <h1 class="brand-title">Hemanathan University</h1>
+          <span class="brand-subtitle">Knowledge • Innovation • Excellence</span>
+          <span class="brand-founder-tag">Founded & Owned by <strong>Hemanathan</strong> • Est. 1998</span>
+        </div>
+      </a>
+      <div class="header-accreditations">
+        <div class="accreditation-pill">
+          <i class="fas fa-award"></i>
+          <div class="accreditation-info">
+            <span class="acc-title">NAAC 'A++' Grade</span>
+            <span class="acc-sub">Highest Honor</span>
+          </div>
+        </div>
+        <div class="accreditation-pill">
+          <i class="fas fa-university"></i>
+          <div class="accreditation-info">
+            <span class="acc-title">UGC Recognized</span>
+            <span class="acc-sub">AICTE Approved</span>
+          </div>
+        </div>
+      </div>
+      <div class="header-cta-group">
+        <a href="admissions.html" class="btn btn-gold"><i class="fas fa-paper-plane"></i> Apply Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <button class="mobile-toggle-btn" id="mobileToggle"><i class="fas fa-bars"></i></button>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="academics.html" class="nav-link active">Academics</a></li>
+        <li class="nav-item"><a href="board.html" class="nav-link">Board Members</a></li>
+        <li class="nav-item"><a href="faculty.html" class="nav-link">Faculty</a></li>
+        <li class="nav-item"><a href="admissions.html" class="nav-link">Admissions</a></li>
+        <li class="nav-item"><a href="departments.html" class="nav-link">Departments</a></li>
+        <li class="nav-item"><a href="research.html" class="nav-link">Research</a></li>
+        <li class="nav-item"><a href="campus.html" class="nav-link">Campus</a></li>
+        <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="admissions.html" class="btn btn-sm btn-gold"><i class="fas fa-file-signature"></i> Apply 2026</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section style="background: var(--navy-gradient); color: var(--white); padding: 4.5rem 0; position: relative; border-bottom: 2px solid var(--gold-500);">
+    <div class="container text-center" style="text-align: center; max-width: 850px;">
+      <span class="section-tag" style="color: var(--gold-300);">Curricula & Degrees</span>
+      <h1 style="color: var(--white); font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 1rem;">
+        Academic Programs
+      </h1>
+      <p style="color: var(--slate-200); font-size: 1.1rem; line-height: 1.7;">
+        Explore rigorous undergraduate, postgraduate, and advanced research degrees co-designed with industry leaders to unlock exceptional global career trajectories.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROGRAM FILTERS & DIRECTORY -->
+  <section class="section-padding">
+    <div class="container">
+      <!-- Tabs: All, Undergraduate, Postgraduate, Research -->
+      <div class="filter-tabs" id="programTabs">
+        <button class="tab-btn active" data-level="all">All Programs</button>
+        <button class="tab-btn" data-level="Undergraduate">Undergraduate (UG)</button>
+        <button class="tab-btn" data-level="Postgraduate">Postgraduate (PG)</button>
+        <button class="tab-btn" data-level="Research">Research (M.Phil / Ph.D.)</button>
+      </div>
+
+      <div class="cards-grid" id="academicProgramsGrid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-legal-copy">
+          &copy; 2026 <strong>Hemanathan University</strong>. Founded and Owned by <strong>Hemanathan</strong>.
+        </div>
+        <div>
+          <a href="index.html" style="color: var(--slate-400); margin-right: 1.5rem;">Home</a>
+          <a href="admissions.html" style="color: var(--slate-400); margin-right: 1.5rem;">Admissions Portal</a>
+          <a href="admin.html" style="color: var(--gold-400);"><i class="fas fa-lock"></i> Admin Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let currentLevel = 'all';
+      renderPrograms('academicProgramsGrid', currentLevel);
+
+      const tabs = document.querySelectorAll('#programTabs .tab-btn');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          currentLevel = tab.getAttribute('data-level');
+          renderPrograms('academicProgramsGrid', currentLevel);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

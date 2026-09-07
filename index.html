@@ -1,14 +1,662 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hemanathan University | Knowledge • Innovation • Excellence</title>
+  <meta name="description" content="Official website of Hemanathan University, founded and owned by Hemanathan. A premier higher education institution recognized for academic excellence, innovative research, and world-class faculty.">
+  <link rel="icon" type="image/jpeg" href="assets/images/university_crest.jpg">
+  
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
 
-</body>
+  <!-- TOP NOTICE & ANNOUNCEMENT BAR -->
+  <div class="top-notice-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span class="notice-badge"><i class="fas fa-bullhorn"></i> Announcement</span>
+        <div class="ticker-content" id="announcementTicker">
+          <span>Admissions Open for Academic Year 2026-27: UG, PG & Ph.D. Programs</span>
+          <a href="admissions.html" style="margin-left: 0.5rem;">Apply Online &rarr;</a>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+914428904000" class="top-bar-link"><i class="fas fa-phone-alt"></i> +91 (044) 2890-4000</a>
+        <a href="mailto:admissions@hemanathan.edu.in" class="top-bar-link"><i class="fas fa-envelope"></i> admissions@hemanathan.edu.in</a>
+        <a href="admin.html" class="top-bar-link admin-btn"><i class="fas fa-user-shield"></i> Admin Portal</a>
+      </div>
+    </div>
+  </div>
 
+  <!-- MAIN BRAND HEADER -->
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="brand-wrapper">
+        <img src="assets/images/university_crest.jpg" alt="Hemanathan University Crest" class="brand-crest">
+        <div class="brand-meta">
+          <h1 class="brand-title">Hemanathan University</h1>
+          <span class="brand-subtitle">Knowledge • Innovation • Excellence</span>
+          <span class="brand-founder-tag">Founded & Owned by <strong>Hemanathan</strong> • Est. 1998</span>
+        </div>
+      </a>
+
+      <div class="header-accreditations">
+        <div class="accreditation-pill">
+          <i class="fas fa-award"></i>
+          <div class="accreditation-info">
+            <span class="acc-title">NAAC 'A++' Grade</span>
+            <span class="acc-sub">CGPA 3.84 / 4.00</span>
+          </div>
+        </div>
+        <div class="accreditation-pill">
+          <i class="fas fa-university"></i>
+          <div class="accreditation-info">
+            <span class="acc-title">UGC Recognized</span>
+            <span class="acc-sub">AICTE Approved</span>
+          </div>
+        </div>
+        <div class="accreditation-pill">
+          <i class="fas fa-chart-line"></i>
+          <div class="accreditation-info">
+            <span class="acc-title">NIRF Top 30</span>
+            <span class="acc-sub">National Ranking</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-cta-group">
+        <a href="admissions.html" class="btn btn-gold"><i class="fas fa-paper-plane"></i> Apply Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- STICKY PRIMARY NAVIGATION -->
+  <nav class="navbar" id="mainNavbar">
+    <div class="container">
+      <button class="mobile-toggle-btn" id="mobileToggle" aria-label="Toggle Navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="academics.html" class="nav-link">Academics</a></li>
+        <li class="nav-item"><a href="board.html" class="nav-link">Board Members</a></li>
+        <li class="nav-item"><a href="faculty.html" class="nav-link">Faculty</a></li>
+        <li class="nav-item"><a href="admissions.html" class="nav-link">Admissions</a></li>
+        <li class="nav-item"><a href="departments.html" class="nav-link">Departments</a></li>
+        <li class="nav-item"><a href="research.html" class="nav-link">Research</a></li>
+        <li class="nav-item"><a href="campus.html" class="nav-link">Campus</a></li>
+        <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="admin.html" class="btn btn-sm btn-outline-gold" style="font-size: 0.8rem;">
+          <i class="fas fa-cog"></i> Manage Portal
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <img src="assets/images/campus_hero.jpg" alt="Hemanathan University Campus Quadrangle" class="hero-background-image">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-pretitle">
+          <i class="fas fa-graduation-cap"></i> Premier Higher Education Institution
+        </div>
+        <h1 class="hero-title">
+          Welcome to <br><span class="gold-text">Hemanathan University</span>
+        </h1>
+        <div class="hero-subtitle">
+          "Knowledge • Innovation • Excellence"
+        </div>
+        <p class="hero-desc">
+          Founded and guided by the transformative vision of <strong>Hemanathan</strong>, our university empowers future leaders with world-class academic rigor, groundbreaking technological research, and ethical stewardship on an inspiring 120-acre eco-green smart campus.
+        </p>
+        <div class="hero-cta-buttons">
+          <a href="admissions.html" class="btn btn-gold btn-lg">
+            <i class="fas fa-paper-plane"></i> Apply Now 2026
+          </a>
+          <a href="academics.html" class="btn btn-outline-white btn-lg">
+            <i class="fas fa-book-open"></i> Explore Programs
+          </a>
+          <a href="board.html" class="btn btn-outline-gold btn-lg">
+            <i class="fas fa-users-cog"></i> Meet Our Team
+          </a>
+        </div>
+
+        <div class="hero-highlights">
+          <div class="hero-highlight-card">
+            <i class="fas fa-calendar-check"></i>
+            <div class="hero-highlight-text">
+              <strong>Admissions Open</strong>
+              <span>Academic Year 2026-27</span>
+            </div>
+          </div>
+          <div class="hero-highlight-card">
+            <i class="fas fa-microchip"></i>
+            <div class="hero-highlight-text">
+              <strong>AI & High-Tech Labs</strong>
+              <span>NVIDIA Supercomputing Hub</span>
+            </div>
+          </div>
+          <div class="hero-highlight-card">
+            <i class="fas fa-briefcase"></i>
+            <div class="hero-highlight-text">
+              <strong>98.6% Placements</strong>
+              <span>240+ Global Recruiters</span>
+            </div>
+          </div>
+          <div class="hero-highlight-card">
+            <i class="fas fa-hand-holding-heart"></i>
+            <div class="hero-highlight-text">
+              <strong>₹15 Cr Scholarships</strong>
+              <span>Founder's Merit Grants</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATISTICS STRIP -->
+  <div class="container">
+    <div class="stats-strip">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">28+</div>
+          <div class="stat-label">Years of Academic Brilliance</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">16,500+</div>
+          <div class="stat-label">Students & Scholars</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">98.6%</div>
+          <div class="stat-label">Placement Record</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">140+</div>
+          <div class="stat-label">Patents & Research Innovations</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIVERSITY INTRODUCTION & VISION/MISSION -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Institutional Heritage</span>
+        <h2 class="section-title">An Institution Dedicated to Future Leadership</h2>
+        <p class="section-desc">
+          Hemanathan University stands as a sanctuary of intellectual inquiry, fostering holistic academic growth, entrepreneurial resilience, and technological ingenuity.
+        </p>
+        <div class="title-underline"></div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+        <div style="background: var(--white); border-radius: var(--radius-lg); padding: 2.5rem; border: 1px solid var(--slate-200); box-shadow: var(--shadow-md); border-top: 4px solid var(--gold-500);">
+          <div style="width: 56px; height: 56px; border-radius: var(--radius-md); background: var(--primary-50); color: var(--primary-700); font-size: 1.6rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3 style="color: var(--primary-900); font-size: 1.4rem; margin-bottom: 1rem;">Our Vision</h3>
+          <p style="color: var(--slate-600); line-height: 1.7;">
+            To be a globally distinguished center of transformative education, pioneering research, and character formation, preparing graduates to navigate complex world challenges with intellect, integrity, and social purpose.
+          </p>
+        </div>
+
+        <div style="background: var(--white); border-radius: var(--radius-lg); padding: 2.5rem; border: 1px solid var(--slate-200); box-shadow: var(--shadow-md); border-top: 4px solid var(--primary-700);">
+          <div style="width: 56px; height: 56px; border-radius: var(--radius-md); background: #fef3c7; color: #b45309; font-size: 1.6rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+            <i class="fas fa-compass"></i>
+          </div>
+          <h3 style="color: var(--primary-900); font-size: 1.4rem; margin-bottom: 1rem;">Our Mission</h3>
+          <p style="color: var(--slate-600); line-height: 1.7;">
+            To cultivate deep analytical rigor, experiential learning, and multi-disciplinary exploration through world-class educators, industry-integrated curricula, modern research labs, and inclusive scholarships.
+          </p>
+        </div>
+
+        <div style="background: var(--white); border-radius: var(--radius-lg); padding: 2.5rem; border: 1px solid var(--slate-200); box-shadow: var(--shadow-md); border-top: 4px solid var(--gold-600);">
+          <div style="width: 56px; height: 56px; border-radius: var(--radius-md); background: #d1fae5; color: #047857; font-size: 1.6rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+            <i class="fas fa-gem"></i>
+          </div>
+          <h3 style="color: var(--primary-900); font-size: 1.4rem; margin-bottom: 1rem;">Our Core Values</h3>
+          <p style="color: var(--slate-600); line-height: 1.7;">
+            Truth (Veritas), Intellectual Rigor, Ethical Conduct, Innovation, Inclusive Opportunity, and Global Civic Responsibility form the unshakeable bedrock of all academic life at Hemanathan University.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER & OWNER HIGHLIGHT SECTION -->
+  <section class="section-padding founder-section">
+    <div class="container">
+      <div class="founder-card">
+        <div class="founder-image-wrapper">
+          <img src="assets/images/chancellor_office.jpg" alt="Founder & Owner Hemanathan's Executive Suite" class="founder-image">
+          <div class="founder-image-badge">
+            <div class="founder-badge-title">Hemanathan</div>
+            <div class="founder-badge-role">Founder & Owner • Hemanathan University</div>
+          </div>
+        </div>
+        <div class="founder-content-wrapper">
+          <span class="section-tag">Visionary Leadership</span>
+          <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--primary-900); margin-bottom: 0.5rem;">
+            Founded & Guided by Hemanathan
+          </h2>
+          <p style="color: var(--slate-600); font-size: 1rem; line-height: 1.7;">
+            Under the visionary patronage and transformative guidance of <strong>Hemanathan</strong>, the university was founded with a singular commitment: to make world-class higher education accessible, ethically grounded, and technologically advanced.
+          </p>
+
+          <div class="founder-quote-box">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="founder-quote-text">
+              "Education is not only about gaining knowledge; it is about developing the confidence, skills, and vision to create a better future."
+            </div>
+            <div class="founder-quote-author">— Hemanathan, Founder & Owner</div>
+          </div>
+
+          <div class="founder-pillars-grid">
+            <div class="pillar-item">
+              <strong>Academic Excellence</strong>
+              <p>Cutting-edge curricula benchmarked with premier global institutions.</p>
+            </div>
+            <div class="pillar-item">
+              <strong>High-Tech Innovation</strong>
+              <p>Dedicated research labs in AI, computing, and sustainable technologies.</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="about.html#founder" class="btn btn-primary">
+              Read Founder's Full Biography &rarr;
+            </a>
+            <a href="board.html" class="btn btn-outline-gold">
+              View Governing Board &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- "MEET OUR LEADERSHIP & FACULTY" (CRITICAL PROMPT REQUIREMENT) -->
+  <section class="section-padding" style="background: var(--slate-100);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Academic Stewardship</span>
+        <h2 class="section-title">Meet Our Leadership & Faculty</h2>
+        <p class="section-desc">
+          Guided by esteemed chancellors, visionary academic administrators, and internationally acclaimed teaching faculty across seven major university departments.
+        </p>
+        <div class="title-underline"></div>
+      </div>
+
+      <!-- Featured Board Members (3) -->
+      <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: flex-end;">
+        <div>
+          <h3 style="color: var(--primary-900); font-size: 1.5rem; font-family: var(--font-serif);"><i class="fas fa-user-shield" style="color: var(--gold-600); margin-right: 0.5rem;"></i> Featured Board Members</h3>
+          <p style="color: var(--slate-500); font-size: 0.88rem; margin: 0;">Institutional leaders driving university governance, strategy, and excellence.</p>
+        </div>
+        <a href="board.html" class="btn btn-sm btn-outline-navy">View All Board Members &rarr;</a>
+      </div>
+      <div class="cards-grid" id="homeFeaturedBoardGrid" style="margin-bottom: 4rem;">
+        <!-- Loaded dynamically via JS with fallback -->
+      </div>
+
+      <!-- Featured Faculty Members (3) -->
+      <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: flex-end;">
+        <div>
+          <h3 style="color: var(--primary-900); font-size: 1.5rem; font-family: var(--font-serif);"><i class="fas fa-chalkboard-teacher" style="color: var(--primary-600); margin-right: 0.5rem;"></i> Featured Faculty Members</h3>
+          <p style="color: var(--slate-500); font-size: 0.88rem; margin: 0;">Distinguished professors and scholars heading key teaching departments.</p>
+        </div>
+        <a href="faculty.html" class="btn btn-sm btn-outline-navy">View All Faculty &rarr;</a>
+      </div>
+      <div class="cards-grid" id="homeFeaturedFacultyGrid">
+        <!-- Loaded dynamically via JS with fallback -->
+      </div>
+
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="board.html" class="btn btn-gold btn-lg">
+          View All Members &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED DEPARTMENTS -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Schools of Excellence</span>
+        <h2 class="section-title">Academic Departments</h2>
+        <p class="section-desc">
+          Offering rigorous, accredited degree programs spanning Computer Science, Computer Applications, Commerce, Management, Mathematics, Physics, and English.
+        </p>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="cards-grid" id="homeDepartmentsGrid">
+        <!-- Loaded via JS -->
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="departments.html" class="btn btn-outline-navy btn-lg">
+          Explore All 7 Departments &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMPUS FACILITIES SHOWCASE -->
+  <section class="section-padding" style="background: var(--slate-900); color: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" style="color: var(--gold-400);">World-Class Infrastructure</span>
+        <h2 class="section-title" style="color: var(--white);">Campus & World-Class Facilities</h2>
+        <p class="section-desc" style="color: var(--slate-300);">
+          From high-performance AI research clusters and smart classrooms to Olympic sports arenas and digital libraries, our 120-acre campus inspires peak achievement.
+        </p>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="cards-grid" id="homeFacilitiesGrid">
+        <!-- Loaded via JS -->
+      </div>
+
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="campus.html" class="btn btn-gold btn-lg">
+          Tour Full Campus & Facilities &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPCOMING EVENTS & CONFERENCES -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Campus Life & Happenings</span>
+        <h2 class="section-title">Upcoming University Events</h2>
+        <p class="section-desc">
+          Convocations, international research symposiums, hackathons, and cultural fests that shape the vibrant collegiate experience at Hemanathan University.
+        </p>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="cards-grid" id="homeEventsGrid">
+        <!-- Loaded via JS -->
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="events.html" class="btn btn-primary btn-lg">
+          View All University Events &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDENT & ALUMNI TESTIMONIALS -->
+  <section class="section-padding" style="background: var(--slate-100);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Voices of Success</span>
+        <h2 class="section-title">What Our Scholars Say</h2>
+        <p class="section-desc">
+          Hear from our accomplished students and alumni thriving across global tech corporations, startups, and prestigious doctoral fellowships.
+        </p>
+        <div class="title-underline"></div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            "Studying at Hemanathan University has been the most transformative chapter of my life. The state-of-the-art AI labs and mentorship from world-class faculty gave me the confidence to secure a role as an AI Engineer at Microsoft."
+          </div>
+          <div class="testimonial-author-box">
+            <img src="assets/images/university_crest.jpg" alt="Aditya Subramanian" class="author-avatar">
+            <div>
+              <div class="author-name">Aditya Subramanian</div>
+              <div class="author-sub">B.Sc Computer Science ('24) • AI Engineer, Microsoft</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            "Founder Hemanathan's vision of blending academic rigor with moral leadership is palpable across every classroom and seminar. The corporate mentorship helped our team launch our FinTech venture straight out of university."
+          </div>
+          <div class="testimonial-author-box">
+            <img src="assets/images/university_crest.jpg" alt="Sneha Nair" class="author-avatar">
+            <div>
+              <div class="author-name">Sneha Nair</div>
+              <div class="author-sub">MBA Graduate ('23) • Co-Founder, PayNext Technologies</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            "The computational resources and research grants provided by HU enabled our team to publish 3 international IEEE papers and file a patent before even finishing our MCA degree."
+          </div>
+          <div class="testimonial-author-box">
+            <img src="assets/images/university_crest.jpg" alt="Rohan Kulkarni" class="author-avatar">
+            <div>
+              <div class="author-name">Rohan Kulkarni</div>
+              <div class="author-sub">MCA Alumnus ('25) • Doctoral Fellow at NUS Singapore</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section style="background: var(--navy-gradient); padding: 4.5rem 0; color: var(--white); text-align: center; border-top: 3px solid var(--gold-500);">
+    <div class="container" style="max-width: 800px;">
+      <h2 style="color: var(--white); font-size: 2.4rem; font-family: var(--font-serif); margin-bottom: 1rem;">
+        Begin Your Journey of Excellence
+      </h2>
+      <p style="color: var(--slate-200); font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem;">
+        Applications are now being reviewed for Undergraduate, Postgraduate, and Doctoral research fellowships for the Academic Year 2026-27. Secure your future at Hemanathan University.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
+        <a href="admissions.html" class="btn btn-gold btn-lg">
+          <i class="fas fa-file-signature"></i> Start Your Application
+        </a>
+        <a href="contact.html" class="btn btn-outline-white btn-lg">
+          <i class="fas fa-map-marked-alt"></i> Schedule a Campus Visit
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBER PROFILE MODAL -->
+  <div class="member-modal-overlay" id="memberModalOverlay">
+    <div class="member-modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Profile Modal">&times;</button>
+      
+      <div class="modal-header-hero">
+        <img src="assets/images/university_crest.jpg" alt="Member Photo" class="modal-avatar-lg" id="modalMemberPhoto">
+        <div class="modal-title-info">
+          <h2 class="modal-member-name" id="modalMemberName">Member Name</h2>
+          <div class="modal-member-pos" id="modalMemberRole">Designation / Role</div>
+          <div class="modal-member-dept" id="modalMemberDept">Department Name</div>
+        </div>
+      </div>
+
+      <div class="modal-body-content">
+        <div class="modal-meta-grid">
+          <div class="modal-meta-box">
+            <strong>Qualification</strong>
+            <span id="modalMemberQual">Ph.D.</span>
+          </div>
+          <div class="modal-meta-box">
+            <strong>Years of Experience</strong>
+            <span id="modalMemberExp">15+ Years</span>
+          </div>
+          <div class="modal-meta-box">
+            <strong>Specialization / Area</strong>
+            <span id="modalMemberSpec">Computer Science</span>
+          </div>
+          <div class="modal-meta-box">
+            <strong>Official Email</strong>
+            <a href="#" id="modalMemberEmail" style="color: var(--primary-600); font-weight: 700;">email@hemanathan.edu.in</a>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h4 class="modal-section-title"><i class="fas fa-user-circle"></i> Professional Biography</h4>
+          <p id="modalMemberBio" style="color: var(--slate-600); line-height: 1.7;"></p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h4 class="modal-section-title"><i class="fas fa-microscope"></i> Research Interests</h4>
+          <p id="modalMemberResearch" style="color: var(--slate-600); line-height: 1.7;"></p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h4 class="modal-section-title"><i class="fas fa-book"></i> Publications & Patents</h4>
+          <p id="modalMemberPubs" style="color: var(--slate-600); line-height: 1.7;"></p>
+        </div>
+
+        <div style="margin-bottom: 2.5rem;">
+          <h4 class="modal-section-title"><i class="fas fa-trophy"></i> Honors & Achievements</h4>
+          <p id="modalMemberAch" style="color: var(--slate-600); line-height: 1.7;"></p>
+        </div>
+
+        <div style="text-align: right; border-top: 1px solid var(--slate-200); padding-top: 1.5rem;">
+          <button type="button" class="btn btn-outline-navy" id="modalBackBtn">
+            <i class="fas fa-arrow-left"></i> <span id="modalBackBtnText">Back to Members</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-container">
+      <button class="lightbox-close-btn" id="lightboxCloseBtn">&times;</button>
+      <img src="" alt="Enlarged Campus View" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+              <img src="assets/images/university_crest.jpg" alt="Hemanathan University Crest" style="width: 54px; height: 54px; border-radius: 50%; border: 2px solid var(--gold-500);">
+              <div>
+                <h3 class="footer-brand-title">Hemanathan University</h3>
+                <div class="footer-brand-founder">Founded & Owned by Hemanathan</div>
+              </div>
+            </div>
+            <p class="footer-about-text">
+              Recognized by UGC and accredited NAAC 'A++', Hemanathan University is dedicated to developing world-class ethical scholars, innovative engineers, and dynamic entrepreneurs.
+            </p>
+            <div class="footer-social-links">
+              <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Quick Links</h4>
+            <ul class="footer-links-list">
+              <li><a href="about.html"><i class="fas fa-chevron-right" style="font-size: 0.7rem; color: var(--gold-500);"></i> About University</a></li>
+              <li><a href="about.html#founder"><i class="fas fa-chevron-right" style="font-size: 0.7rem; color: var(--gold-500);"></i> Founder & Owner</a></li>
+              <li><a href="board.html"><i class="fas fa-chevron-right" style="font-size: 0.7rem; color: var(--gold-500);"></i> Board of Members</a></li>
+              <li><a href="faculty.html"><i class="fas fa-chevron-right" style="font-size: 0.7rem; color: var(--gold-500);"></i> Faculty Directory</a></li>
+              <li><a href="departments.html"><i class="fas fa-chevron-right" style="font-size: 0.7rem; color: var(--gold-500);"></i> Academic Departments</a></li>
+              <li><a href="academics.html"><i class="fas fa-chevron-right" style="font-size: 0.7rem; color: var(--gold-500);"></i> Degree Programs</a></li>
+              <li><a href="admin.html"><i class="fas fa-chevron-right" style="font-size: 0.7rem; color: var(--gold-500);"></i> Administrator Portal</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Admissions & Campus</h4>
+            <ul class="footer-links-list">
+              <li><a href="admissions.html"><i class="fas fa-chevron-right" style="font-size: 0.7rem; color: var(--gold-500);"></i> Apply Online 2026</a></li>
+              <li><a href="admissions.html#fees"><i class="fas fa-chevron-right" style="font-size: 0.7rem; color: var(--gold-500);"></i> Fee Structures</a></li>
+              <li><a href="research.html"><i class="fas fa-chevron-right" style="font-size: 0.7rem; color: var(--gold-500);"></i> Research Centers</a></li>
+              <li><a href="campus.html"><i class="fas fa-chevron-right" style="font-size: 0.7rem; color: var(--gold-500);"></i> Campus Facilities</a></li>
+              <li><a href="events.html"><i class="fas fa-chevron-right" style="font-size: 0.7rem; color: var(--gold-500);"></i> Events & News</a></li>
+              <li><a href="gallery.html"><i class="fas fa-chevron-right" style="font-size: 0.7rem; color: var(--gold-500);"></i> Photo Gallery</a></li>
+              <li><a href="contact.html"><i class="fas fa-chevron-right" style="font-size: 0.7rem; color: var(--gold-500);"></i> Contact Campus</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Campus Location</h4>
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Hemanathan Knowledge Park, Rajiv Gandhi Salai (OMR), Chennai, Tamil Nadu - 600119, India</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 (044) 2890-4000 / 4001</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>info@hemanathan.edu.in</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-clock"></i>
+              <span>Mon - Sat: 8:30 AM - 5:30 PM IST</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-legal-copy">
+          &copy; 2026 <strong>Hemanathan University</strong>. Founded and Owned by <strong>Hemanathan</strong>. All Rights Reserved.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" style="color: var(--slate-400); font-size: 0.8rem;">Privacy Policy</a>
+          <a href="#" style="color: var(--slate-400); font-size: 0.8rem;">Terms of Academic Senate</a>
+          <a href="admin.html" style="color: var(--gold-400); font-size: 0.8rem;"><i class="fas fa-lock"></i> Admin Login</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 3 Featured Board Members
+      renderBoardMembers('homeFeaturedBoardGrid', { featuredOnly: true, limit: 3 });
+      // 3 Featured Faculty Members
+      renderFacultyMembers('homeFeaturedFacultyGrid', { featuredOnly: true, limit: 3 });
+      // 3 Featured Departments
+      renderDepartments('homeDepartmentsGrid', 3);
+      // 3 Featured Facilities
+      renderFacilities('homeFacilitiesGrid', 3);
+      // 3 Upcoming Events
+      renderEvents('homeEventsGrid', 'all', 3);
+    });
+  </script>
+</body>
 </html>

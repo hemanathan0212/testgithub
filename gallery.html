@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery | Hemanathan University</title>
+  <meta name="description" content="Explore photos of Hemanathan University's majestic campus, student life, research labs, sports complex, graduation ceremonies, and cultural fests with interactive lightbox.">
+  <link rel="icon" type="image/jpeg" href="assets/images/university_crest.jpg">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- TOP NOTICE BAR -->
+  <div class="top-notice-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span class="notice-badge"><i class="fas fa-camera"></i> Media Gallery</span>
+        <div class="ticker-content">
+          <span>Explore campus architecture, student festivals, and convocation moments.</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+914428904000" class="top-bar-link"><i class="fas fa-phone-alt"></i> +91 (044) 2890-4000</a>
+        <a href="admin.html" class="top-bar-link admin-btn"><i class="fas fa-user-shield"></i> Admin Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="brand-wrapper">
+        <img src="assets/images/university_crest.jpg" alt="Hemanathan University Crest" class="brand-crest">
+        <div class="brand-meta">
+          <h1 class="brand-title">Hemanathan University</h1>
+          <span class="brand-subtitle">Knowledge • Innovation • Excellence</span>
+          <span class="brand-founder-tag">Founded & Owned by <strong>Hemanathan</strong> • Est. 1998</span>
+        </div>
+      </a>
+      <div class="header-accreditations">
+        <div class="accreditation-pill">
+          <i class="fas fa-award"></i>
+          <div class="accreditation-info">
+            <span class="acc-title">NAAC 'A++' Grade</span>
+            <span class="acc-sub">Highest Honor</span>
+          </div>
+        </div>
+      </div>
+      <div class="header-cta-group">
+        <a href="admissions.html" class="btn btn-gold"><i class="fas fa-paper-plane"></i> Apply Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <button class="mobile-toggle-btn" id="mobileToggle"><i class="fas fa-bars"></i></button>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="academics.html" class="nav-link">Academics</a></li>
+        <li class="nav-item"><a href="board.html" class="nav-link">Board Members</a></li>
+        <li class="nav-item"><a href="faculty.html" class="nav-link">Faculty</a></li>
+        <li class="nav-item"><a href="admissions.html" class="nav-link">Admissions</a></li>
+        <li class="nav-item"><a href="departments.html" class="nav-link">Departments</a></li>
+        <li class="nav-item"><a href="research.html" class="nav-link">Research</a></li>
+        <li class="nav-item"><a href="campus.html" class="nav-link">Campus</a></li>
+        <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="admin.html" class="btn btn-sm btn-outline-gold"><i class="fas fa-cog"></i> Admin Portal</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section style="background: var(--navy-gradient); color: var(--white); padding: 4.5rem 0; position: relative; border-bottom: 2px solid var(--gold-500);">
+    <div class="container text-center" style="text-align: center; max-width: 850px;">
+      <span class="section-tag" style="color: var(--gold-300);">Visual Journey</span>
+      <h1 style="color: var(--white); font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 1rem;">
+        Campus & Student Life Gallery
+      </h1>
+      <p style="color: var(--slate-200); font-size: 1.1rem; line-height: 1.7;">
+        Glimpses of collegiate vibrancy, cutting-edge laboratories, sports triumphs, and academic convocations at Hemanathan University.
+      </p>
+    </div>
+  </section>
+
+  <!-- GALLERY CATEGORIES & GRID -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="filter-tabs" id="galleryTabs">
+        <button class="tab-btn active" data-cat="all">All Photos</button>
+        <button class="tab-btn" data-cat="Campus">Campus</button>
+        <button class="tab-btn" data-cat="Events">Events</button>
+        <button class="tab-btn" data-cat="Faculty">Faculty & Labs</button>
+        <button class="tab-btn" data-cat="Sports">Sports</button>
+        <button class="tab-btn" data-cat="Graduation">Graduation</button>
+      </div>
+
+      <div class="gallery-grid" id="fullGalleryGrid">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-container">
+      <button class="lightbox-close-btn" id="lightboxCloseBtn">&times;</button>
+      <img src="" alt="Enlarged Campus View" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-legal-copy">
+          &copy; 2026 <strong>Hemanathan University</strong>. Founded and Owned by <strong>Hemanathan</strong>.
+        </div>
+        <div>
+          <a href="index.html" style="color: var(--slate-400); margin-right: 1.5rem;">Home</a>
+          <a href="campus.html" style="color: var(--slate-400); margin-right: 1.5rem;">Campus</a>
+          <a href="admin.html" style="color: var(--gold-400);"><i class="fas fa-lock"></i> Admin Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let currentCategory = 'all';
+      renderGallery('fullGalleryGrid', currentCategory);
+
+      const tabs = document.querySelectorAll('#galleryTabs .tab-btn');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          currentCategory = tab.getAttribute('data-cat');
+          renderGallery('fullGalleryGrid', currentCategory);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

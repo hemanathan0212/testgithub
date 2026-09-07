@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Hemanathan University</title>
+  <meta name="description" content="Administrative management dashboard for Hemanathan University. Manage Board Members, Faculty, Events, and Announcements.">
+  <link rel="icon" type="image/jpeg" href="assets/images/university_crest.jpg">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+    
+    <!-- ADMIN SIDEBAR -->
+    <aside class="admin-sidebar">
+      <div class="admin-brand-box">
+        <img src="assets/images/university_crest.jpg" alt="University Crest" class="admin-crest-img">
+        <div class="admin-brand-text">
+          <h2>Hemanathan University</h2>
+          <span>Admin Portal</span>
+        </div>
+      </div>
+
+      <div class="admin-profile-pill">
+        <img src="assets/images/chancellor_office.jpg" alt="Admin Hemanathan" class="admin-avatar-sm">
+        <div class="admin-user-info">
+          <strong>Hemanathan</strong>
+          <span>Founder & Admin</span>
+        </div>
+      </div>
+
+      <ul class="admin-nav">
+        <li class="admin-nav-item">
+          <button class="admin-nav-btn active" data-tab="tab-overview">
+            <i class="fas fa-tachometer-alt"></i> Dashboard Overview
+          </button>
+        </li>
+        <li class="admin-nav-item">
+          <button class="admin-nav-btn" data-tab="tab-board">
+            <i class="fas fa-user-shield"></i> Board of Members
+          </button>
+        </li>
+        <li class="admin-nav-item">
+          <button class="admin-nav-btn" data-tab="tab-faculty">
+            <i class="fas fa-chalkboard-teacher"></i> Faculty Directory
+          </button>
+        </li>
+        <li class="admin-nav-item">
+          <button class="admin-nav-btn" data-tab="tab-events">
+            <i class="fas fa-calendar-alt"></i> Events & Seminars
+          </button>
+        </li>
+        <li class="admin-nav-item">
+          <button class="admin-nav-btn" data-tab="tab-announcements">
+            <i class="fas fa-bullhorn"></i> Announcements
+          </button>
+        </li>
+        <li class="admin-nav-item">
+          <button class="admin-nav-btn" data-tab="tab-applications">
+            <i class="fas fa-file-signature"></i> Student Applications
+          </button>
+        </li>
+      </ul>
+
+      <div class="admin-sidebar-footer">
+        <a href="index.html" class="btn btn-outline-white btn-sm" target="_blank" style="text-align: center;">
+          <i class="fas fa-external-link-alt"></i> View Public Website
+        </a>
+        <button class="btn btn-outline-gold btn-sm" onclick="handleResetAllData()" style="text-align: center; margin-top: 0.5rem;">
+          <i class="fas fa-undo"></i> Reset Default Data
+        </button>
+      </div>
+    </aside>
+
+    <!-- ADMIN MAIN CONTENT -->
+    <main class="admin-main">
+      
+      <!-- Top Bar -->
+      <header class="admin-topbar">
+        <div class="admin-page-title">
+          <h1 id="adminCurrentTitle">Administration Command Center</h1>
+          <p>Logged in as <strong>Hemanathan (Founder & Owner)</strong> • University Management System</p>
+        </div>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+          <a href="index.html" class="btn btn-outline-navy btn-sm"><i class="fas fa-globe"></i> Visit Site</a>
+          <button class="btn btn-gold btn-sm" onclick="openAddFacultyModal()"><i class="fas fa-plus"></i> Quick Add Faculty</button>
+        </div>
+      </header>
+
+      <!-- Content View Area -->
+      <div class="admin-content-area">
+        
+        <!-- ================= TAB 1: OVERVIEW ================= -->
+        <div class="admin-tab-pane" id="tab-overview" style="display: block;">
+          
+          <!-- Statistics Cards Grid from prompt -->
+          <div class="admin-stats-grid">
+            
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon-wrap icon-gold">
+                <i class="fas fa-user-shield"></i>
+              </div>
+              <div class="admin-stat-info">
+                <h3 id="statTotalBoard">7</h3>
+                <p>Board Members</p>
+              </div>
+            </div>
+
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon-wrap icon-blue">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="admin-stat-info">
+                <h3 id="statTotalFaculty">13</h3>
+                <p>Faculty Members</p>
+              </div>
+            </div>
+
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon-wrap icon-purple">
+                <i class="fas fa-university"></i>
+              </div>
+              <div class="admin-stat-info">
+                <h3 id="statTotalDepts">7</h3>
+                <p>Departments</p>
+              </div>
+            </div>
+
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon-wrap icon-green">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <div class="admin-stat-info">
+                <h3 id="statTotalStudents">16,500+</h3>
+                <p>Total Students</p>
+              </div>
+            </div>
+
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon-wrap icon-rose">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+              <div class="admin-stat-info">
+                <h3 id="statTotalEvents">6</h3>
+                <p>Upcoming Events</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Quick Action Panels -->
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+            
+            <div class="mgmt-card">
+              <div class="mgmt-card-header">
+                <h3 class="mgmt-card-title">Recent Administrative Actions & Tips</h3>
+              </div>
+              <div style="padding: 1.75rem;">
+                <p style="color: var(--slate-600); line-height: 1.7; margin-bottom: 1rem;">
+                  Welcome, <strong>Hemanathan</strong>. Any edits or additions made to Board Members, Faculty, Events, or Announcements here will <strong>immediately sync</strong> with the live website via persistent local storage.
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem;">
+                  <button class="btn btn-primary" onclick="openAddBoardModal()">
+                    <i class="fas fa-user-plus"></i> Add Board Member
+                  </button>
+                  <button class="btn btn-gold" onclick="openAddFacultyModal()">
+                    <i class="fas fa-user-graduate"></i> Add Faculty Member
+                  </button>
+                  <button class="btn btn-outline-navy" onclick="openAddEventModal()">
+                    <i class="fas fa-calendar-plus"></i> Create New Event
+                  </button>
+                  <button class="btn btn-outline-navy" onclick="openAddAnnouncementModal()">
+                    <i class="fas fa-bullhorn"></i> Post Announcement
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="mgmt-card">
+              <div class="mgmt-card-header">
+                <h3 class="mgmt-card-title">System Status</h3>
+              </div>
+              <div style="padding: 1.5rem; font-size: 0.88rem;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.85rem;">
+                  <span style="color: var(--slate-500);">Server Environment:</span>
+                  <strong style="color: var(--success);"><i class="fas fa-circle" style="font-size: 0.6rem;"></i> Live & Online</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.85rem;">
+                  <span style="color: var(--slate-500);">Data Persistence:</span>
+                  <strong style="color: var(--primary-700);">Local State Synchronized</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.85rem;">
+                  <span style="color: var(--slate-500);">Accreditation Status:</span>
+                  <strong style="color: var(--gold-700);">NAAC 'A++' Valid</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--slate-500);">Admissions Cycle:</span>
+                  <strong style="color: var(--primary-900);">2026-27 Active</strong>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ================= TAB 2: BOARD MEMBERS MANAGEMENT ================= -->
+        <div class="admin-tab-pane" id="tab-board" style="display: none;">
+          <div class="mgmt-card">
+            <div class="mgmt-card-header">
+              <h3 class="mgmt-card-title">Board of Members Directory</h3>
+              <div class="mgmt-card-actions">
+                <div class="search-input-wrap">
+                  <i class="fas fa-search"></i>
+                  <input type="text" placeholder="Filter board members..." oninput="renderAdminBoardTable(this.value)">
+                </div>
+                <button class="btn btn-gold btn-sm" onclick="openAddBoardModal()">
+                  <i class="fas fa-plus"></i> Add Board Member
+                </button>
+              </div>
+            </div>
+            
+            <div class="table-responsive">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Member</th>
+                    <th>Position</th>
+                    <th>Department / Area</th>
+                    <th>Email Contact</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="adminBoardTableBody">
+                  <!-- Rendered via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= TAB 3: FACULTY MEMBERS MANAGEMENT ================= -->
+        <div class="admin-tab-pane" id="tab-faculty" style="display: none;">
+          <div class="mgmt-card">
+            <div class="mgmt-card-header">
+              <h3 class="mgmt-card-title">Faculty Members Directory</h3>
+              <div class="mgmt-card-actions">
+                <div class="search-input-wrap">
+                  <i class="fas fa-search"></i>
+                  <input type="text" placeholder="Filter faculty..." oninput="renderAdminFacultyTable(this.value)">
+                </div>
+                <button class="btn btn-gold btn-sm" onclick="openAddFacultyModal()">
+                  <i class="fas fa-plus"></i> Add Faculty Member
+                </button>
+              </div>
+            </div>
+
+            <div class="table-responsive">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Faculty Name</th>
+                    <th>Designation</th>
+                    <th>Department</th>
+                    <th>Specialization</th>
+                    <th>Experience</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="adminFacultyTableBody">
+                  <!-- Rendered via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= TAB 4: EVENTS MANAGEMENT ================= -->
+        <div class="admin-tab-pane" id="tab-events" style="display: none;">
+          <div class="mgmt-card">
+            <div class="mgmt-card-header">
+              <h3 class="mgmt-card-title">University Events & Conferences</h3>
+              <div class="mgmt-card-actions">
+                <button class="btn btn-gold btn-sm" onclick="openAddEventModal()">
+                  <i class="fas fa-plus"></i> Add Event
+                </button>
+              </div>
+            </div>
+
+            <div class="table-responsive">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Event Title</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Venue</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="adminEventsTableBody">
+                  <!-- Rendered via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= TAB 5: ANNOUNCEMENTS MANAGEMENT ================= -->
+        <div class="admin-tab-pane" id="tab-announcements" style="display: none;">
+          <div class="mgmt-card">
+            <div class="mgmt-card-header">
+              <h3 class="mgmt-card-title">Announcements & Circulars</h3>
+              <div class="mgmt-card-actions">
+                <button class="btn btn-gold btn-sm" onclick="openAddAnnouncementModal()">
+                  <i class="fas fa-plus"></i> Create Announcement
+                </button>
+              </div>
+            </div>
+
+            <div class="table-responsive">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Headline</th>
+                    <th>Category</th>
+                    <th>Priority</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="adminAnnouncementsTableBody">
+                  <!-- Rendered via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= TAB 6: APPLICATIONS REVIEW ================= -->
+        <div class="admin-tab-pane" id="tab-applications" style="display: none;">
+          <div class="mgmt-card">
+            <div class="mgmt-card-header">
+              <h3 class="mgmt-card-title">Submitted Student Applications</h3>
+              <span style="font-size: 0.85rem; color: var(--slate-500);">Direct feed from online admissions</span>
+            </div>
+
+            <div class="table-responsive">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Application ID</th>
+                    <th>Applicant Name</th>
+                    <th>Program</th>
+                    <th>Contact Info</th>
+                    <th>Score / %</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="adminAppsTableBody">
+                  <!-- Rendered via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- ADMIN EDIT/ADD MEMBER MODAL (FOR BOARD & FACULTY) -->
+  <div class="admin-modal-overlay" id="adminMemberModal">
+    <div class="admin-modal-card">
+      <div class="admin-modal-header">
+        <h3 id="adminMemberModalTitle">Add / Edit Member</h3>
+        <button class="modal-close-btn" style="position: static; color: var(--white); background: rgba(255,255,255,0.2);" onclick="closeAdminModal('adminMemberModal')">&times;</button>
+      </div>
+      <form id="adminMemberForm" onsubmit="handleAdminMemberFormSubmit(event)">
+        <input type="hidden" id="mId">
+        <div class="admin-modal-body">
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="mName">Full Name *</label>
+              <input type="text" id="mName" class="form-control" placeholder="e.g. Dr. Priya Sharma" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="mPosition">Position / Designation *</label>
+              <input type="text" id="mPosition" class="form-control" placeholder="e.g. Vice Chancellor / Professor" required>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="mDepartment">Department / Governance Area *</label>
+              <input type="text" id="mDepartment" class="form-control" placeholder="e.g. Computer Science" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="mQualification">Qualification</label>
+              <input type="text" id="mQualification" class="form-control" placeholder="e.g. Ph.D., M.Tech">
+            </div>
+          </div>
+
+          <div class="form-group" id="mSpecializationGroup">
+            <label class="form-label" for="mSpecialization">Specialization / Research Domain</label>
+            <input type="text" id="mSpecialization" class="form-control" placeholder="e.g. Machine Learning & Neural Networks">
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="mExperience">Experience</label>
+              <input type="text" id="mExperience" class="form-control" placeholder="e.g. 15 Years">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="mEmail">Email Address</label>
+              <input type="email" id="mEmail" class="form-control" placeholder="name@hemanathan.edu.in">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="mPhoto">Photo URL / File Path</label>
+            <input type="text" id="mPhoto" class="form-control" placeholder="assets/images/university_crest.jpg">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="mBio">Biography</label>
+            <textarea id="mBio" class="form-control" placeholder="Brief biography of the member..."></textarea>
+          </div>
+        </div>
+
+        <div class="admin-modal-footer">
+          <button type="button" class="btn btn-outline-navy btn-sm" onclick="closeAdminModal('adminMemberModal')">Cancel</button>
+          <button type="submit" class="btn btn-gold btn-sm"><i class="fas fa-save"></i> Save Member</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ADMIN EDIT/ADD EVENT MODAL -->
+  <div class="admin-modal-overlay" id="adminEventModal">
+    <div class="admin-modal-card">
+      <div class="admin-modal-header">
+        <h3>Add / Edit Event</h3>
+        <button class="modal-close-btn" style="position: static; color: var(--white); background: rgba(255,255,255,0.2);" onclick="closeAdminModal('adminEventModal')">&times;</button>
+      </div>
+      <form id="adminEventForm" onsubmit="handleAdminEventSubmit(event)">
+        <input type="hidden" id="eId">
+        <div class="admin-modal-body">
+          <div class="form-group">
+            <label class="form-label" for="eTitle">Event Title *</label>
+            <input type="text" id="eTitle" class="form-control" placeholder="e.g. Annual Convocation 2026" required>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="eCategory">Category *</label>
+              <select id="eCategory" class="form-control" required>
+                <option value="Graduation">Graduation Ceremony</option>
+                <option value="Conferences">Conferences</option>
+                <option value="Workshops">Workshops</option>
+                <option value="Cultural">Cultural Events</option>
+                <option value="Sports">Sports</option>
+                <option value="Seminars">Seminars</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="eDate">Event Date *</label>
+              <input type="date" id="eDate" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="eTime">Time</label>
+              <input type="text" id="eTime" class="form-control" placeholder="e.g. 10:00 AM - 1:00 PM">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="eVenue">Venue *</label>
+              <input type="text" id="eVenue" class="form-control" placeholder="e.g. Grand Auditorium" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="eSpeaker">Chief Guest / Speaker</label>
+            <input type="text" id="eSpeaker" class="form-control" placeholder="e.g. Hon. Minister of Education">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="eDesc">Description</label>
+            <textarea id="eDesc" class="form-control" placeholder="Event description..."></textarea>
+          </div>
+        </div>
+
+        <div class="admin-modal-footer">
+          <button type="button" class="btn btn-outline-navy btn-sm" onclick="closeAdminModal('adminEventModal')">Cancel</button>
+          <button type="submit" class="btn btn-gold btn-sm"><i class="fas fa-save"></i> Save Event</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ADMIN EDIT/ADD ANNOUNCEMENT MODAL -->
+  <div class="admin-modal-overlay" id="adminAnnModal">
+    <div class="admin-modal-card">
+      <div class="admin-modal-header">
+        <h3>Create / Edit Announcement</h3>
+        <button class="modal-close-btn" style="position: static; color: var(--white); background: rgba(255,255,255,0.2);" onclick="closeAdminModal('adminAnnModal')">&times;</button>
+      </div>
+      <form id="adminAnnForm" onsubmit="handleAdminAnnSubmit(event)">
+        <input type="hidden" id="aId">
+        <div class="admin-modal-body">
+          <div class="form-group">
+            <label class="form-label" for="aTitle">Announcement Title *</label>
+            <input type="text" id="aTitle" class="form-control" placeholder="e.g. Admissions Open 2026-27" required>
+          </div>
+
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label class="form-label" for="aCategory">Category</label>
+              <input type="text" id="aCategory" class="form-control" placeholder="Admissions / Accreditations" value="Admissions">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="aPriority">Priority</label>
+              <select id="aPriority" class="form-control">
+                <option value="Normal">Normal</option>
+                <option value="High">High</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="aDate">Date</label>
+              <input type="date" id="aDate" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="aSummary">Summary</label>
+            <textarea id="aSummary" class="form-control" placeholder="Detailed text of announcement..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="aLink">Redirect Link</label>
+            <input type="text" id="aLink" class="form-control" placeholder="admissions.html" value="admissions.html">
+          </div>
+        </div>
+
+        <div class="admin-modal-footer">
+          <button type="button" class="btn btn-outline-navy btn-sm" onclick="closeAdminModal('adminAnnModal')">Cancel</button>
+          <button type="submit" class="btn btn-gold btn-sm"><i class="fas fa-bullhorn"></i> Publish</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Shared Member Profile Modal for previewing -->
+  <div class="member-modal-overlay" id="memberModalOverlay">
+    <div class="member-modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Profile Modal">&times;</button>
+      <div class="modal-header-hero">
+        <img src="assets/images/university_crest.jpg" alt="Member Photo" class="modal-avatar-lg" id="modalMemberPhoto">
+        <div class="modal-title-info">
+          <h2 class="modal-member-name" id="modalMemberName">Member Name</h2>
+          <div class="modal-member-pos" id="modalMemberRole">Position</div>
+          <div class="modal-member-dept" id="modalMemberDept">Department</div>
+        </div>
+      </div>
+      <div class="modal-body-content">
+        <div class="modal-meta-grid">
+          <div class="modal-meta-box"><strong>Qualification</strong><span id="modalMemberQual">Ph.D.</span></div>
+          <div class="modal-meta-box"><strong>Experience</strong><span id="modalMemberExp">15+ Years</span></div>
+          <div class="modal-meta-box"><strong>Specialization</strong><span id="modalMemberSpec">Domain</span></div>
+          <div class="modal-meta-box"><strong>Official Email</strong><a href="#" id="modalMemberEmail">email@hemanathan.edu.in</a></div>
+        </div>
+        <div>
+          <h4 class="modal-section-title"><i class="fas fa-user-circle"></i> Biography</h4>
+          <p id="modalMemberBio" style="color: var(--slate-600); line-height: 1.7;"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

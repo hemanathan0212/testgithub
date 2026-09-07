@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Members | Hemanathan University</title>
+  <meta name="description" content="Explore the distinguished academic faculty of Hemanathan University. Filter by department or search by specialization and academic qualifications.">
+  <link rel="icon" type="image/jpeg" href="assets/images/university_crest.jpg">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- TOP NOTICE BAR -->
+  <div class="top-notice-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span class="notice-badge"><i class="fas fa-bullhorn"></i> Announcement</span>
+        <div class="ticker-content" id="announcementTicker">
+          <span>Admissions Open for Academic Year 2026-27: UG, PG & Ph.D. Programs</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+914428904000" class="top-bar-link"><i class="fas fa-phone-alt"></i> +91 (044) 2890-4000</a>
+        <a href="mailto:faculty.affairs@hemanathan.edu.in" class="top-bar-link"><i class="fas fa-envelope"></i> faculty.affairs@hemanathan.edu.in</a>
+        <a href="admin.html" class="top-bar-link admin-btn"><i class="fas fa-user-shield"></i> Admin Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="brand-wrapper">
+        <img src="assets/images/university_crest.jpg" alt="Hemanathan University Crest" class="brand-crest">
+        <div class="brand-meta">
+          <h1 class="brand-title">Hemanathan University</h1>
+          <span class="brand-subtitle">Knowledge • Innovation • Excellence</span>
+          <span class="brand-founder-tag">Founded & Owned by <strong>Hemanathan</strong> • Est. 1998</span>
+        </div>
+      </a>
+      <div class="header-accreditations">
+        <div class="accreditation-pill">
+          <i class="fas fa-award"></i>
+          <div class="accreditation-info">
+            <span class="acc-title">NAAC 'A++' Grade</span>
+            <span class="acc-sub">Highest Honor</span>
+          </div>
+        </div>
+        <div class="accreditation-pill">
+          <i class="fas fa-university"></i>
+          <div class="accreditation-info">
+            <span class="acc-title">UGC Recognized</span>
+            <span class="acc-sub">AICTE Approved</span>
+          </div>
+        </div>
+      </div>
+      <div class="header-cta-group">
+        <a href="admissions.html" class="btn btn-gold"><i class="fas fa-paper-plane"></i> Apply Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <button class="mobile-toggle-btn" id="mobileToggle"><i class="fas fa-bars"></i></button>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="academics.html" class="nav-link">Academics</a></li>
+        <li class="nav-item"><a href="board.html" class="nav-link">Board Members</a></li>
+        <li class="nav-item"><a href="faculty.html" class="nav-link active">Faculty</a></li>
+        <li class="nav-item"><a href="admissions.html" class="nav-link">Admissions</a></li>
+        <li class="nav-item"><a href="departments.html" class="nav-link">Departments</a></li>
+        <li class="nav-item"><a href="research.html" class="nav-link">Research</a></li>
+        <li class="nav-item"><a href="campus.html" class="nav-link">Campus</a></li>
+        <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="admin.html" class="btn btn-sm btn-outline-gold"><i class="fas fa-user-plus"></i> Add Faculty</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section style="background: var(--navy-gradient); color: var(--white); padding: 4.5rem 0; position: relative; border-bottom: 2px solid var(--gold-500);">
+    <div class="container text-center" style="text-align: center; max-width: 850px;">
+      <span class="section-tag" style="color: var(--gold-300);">Academic Excellence</span>
+      <h1 style="color: var(--white); font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 1rem;">
+        Distinguished Faculty Members
+      </h1>
+      <p style="color: var(--slate-200); font-size: 1.1rem; line-height: 1.7;">
+        Learn from celebrated researchers, authors, and industry pioneers dedicated to student growth, mentorship, and high-impact scientific inquiry.
+      </p>
+    </div>
+  </section>
+
+  <!-- FACULTY SEARCH & FILTER CONTROLS -->
+  <section style="padding: 2.5rem 0; background: var(--white); border-bottom: 1px solid var(--slate-200);">
+    <div class="container">
+      <div style="max-width: 700px; margin: 0 auto 2rem auto; position: relative;">
+        <input 
+          type="text" 
+          id="facultySearchInput" 
+          placeholder="Search Faculty Members by name, specialization, or designation..." 
+          style="width: 100%; padding: 0.95rem 1.25rem 0.95rem 3rem; font-size: 1rem; border: 2px solid var(--slate-200); border-radius: var(--radius-full); outline: none; box-shadow: var(--shadow-sm); transition: all 0.2s;"
+        >
+        <i class="fas fa-search" style="position: absolute; left: 1.25rem; top: 50%; transform: translateY(-50%); color: var(--gold-600); font-size: 1.1rem;"></i>
+      </div>
+
+      <!-- Department filter from prompt -->
+      <div class="filter-tabs" id="deptFilterTabs">
+        <button class="tab-btn active" data-dept="all">All Faculty</button>
+        <button class="tab-btn" data-dept="Computer Science">Computer Science</button>
+        <button class="tab-btn" data-dept="Computer Applications">Computer Applications</button>
+        <button class="tab-btn" data-dept="Commerce">Commerce</button>
+        <button class="tab-btn" data-dept="Management">Management</button>
+        <button class="tab-btn" data-dept="Mathematics">Mathematics</button>
+        <button class="tab-btn" data-dept="Physics">Physics</button>
+        <button class="tab-btn" data-dept="English">English</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACULTY DIRECTORY GRID -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="cards-grid" id="facultyGrid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBER PROFILE MODAL -->
+  <div class="member-modal-overlay" id="memberModalOverlay">
+    <div class="member-modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Profile Modal">&times;</button>
+      
+      <div class="modal-header-hero">
+        <img src="assets/images/university_crest.jpg" alt="Faculty Photo" class="modal-avatar-lg" id="modalMemberPhoto">
+        <div class="modal-title-info">
+          <h2 class="modal-member-name" id="modalMemberName">Faculty Name</h2>
+          <div class="modal-member-pos" id="modalMemberRole">Designation</div>
+          <div class="modal-member-dept" id="modalMemberDept">Department</div>
+        </div>
+      </div>
+
+      <div class="modal-body-content">
+        <div class="modal-meta-grid">
+          <div class="modal-meta-box">
+            <strong>Qualification</strong>
+            <span id="modalMemberQual">Ph.D.</span>
+          </div>
+          <div class="modal-meta-box">
+            <strong>Experience</strong>
+            <span id="modalMemberExp">12+ Years</span>
+          </div>
+          <div class="modal-meta-box">
+            <strong>Specialization</strong>
+            <span id="modalMemberSpec">Machine Learning</span>
+          </div>
+          <div class="modal-meta-box">
+            <strong>Official Email</strong>
+            <a href="#" id="modalMemberEmail" style="color: var(--primary-600); font-weight: 700;">email@hemanathan.edu.in</a>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h4 class="modal-section-title"><i class="fas fa-user-circle"></i> Academic Biography</h4>
+          <p id="modalMemberBio" style="color: var(--slate-600); line-height: 1.7;"></p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h4 class="modal-section-title"><i class="fas fa-microscope"></i> Research Interests & Labs</h4>
+          <p id="modalMemberResearch" style="color: var(--slate-600); line-height: 1.7;"></p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h4 class="modal-section-title"><i class="fas fa-book"></i> Journal Publications & Patents</h4>
+          <p id="modalMemberPubs" style="color: var(--slate-600); line-height: 1.7;"></p>
+        </div>
+
+        <div style="margin-bottom: 2.5rem;">
+          <h4 class="modal-section-title"><i class="fas fa-trophy"></i> Awards & Research Grants</h4>
+          <p id="modalMemberAch" style="color: var(--slate-600); line-height: 1.7;"></p>
+        </div>
+
+        <div style="text-align: right; border-top: 1px solid var(--slate-200); padding-top: 1.5rem;">
+          <button type="button" class="btn btn-outline-navy" id="modalBackBtn">
+            <i class="fas fa-arrow-left"></i> <span id="modalBackBtnText">Back to Faculty</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-legal-copy">
+          &copy; 2026 <strong>Hemanathan University</strong>. Founded and Owned by <strong>Hemanathan</strong>.
+        </div>
+        <div>
+          <a href="index.html" style="color: var(--slate-400); margin-right: 1.5rem;">Home</a>
+          <a href="board.html" style="color: var(--slate-400); margin-right: 1.5rem;">Board Members</a>
+          <a href="admin.html" style="color: var(--gold-400);"><i class="fas fa-lock"></i> Admin Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let currentDept = 'all';
+    let currentSearch = '';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Check URL parameters for dept
+      const urlParams = new URLSearchParams(window.location.search);
+      const paramDept = urlParams.get('dept');
+      if (paramDept) {
+        currentDept = paramDept.replace('-', ' ');
+        document.querySelectorAll('#deptFilterTabs .tab-btn').forEach(btn => {
+          if (btn.getAttribute('data-dept').toLowerCase() === currentDept.toLowerCase()) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+      }
+
+      renderFaculty();
+
+      // Setup Search Listener
+      const searchInput = document.getElementById('facultySearchInput');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentSearch = e.target.value.trim();
+          renderFaculty();
+        });
+      }
+
+      // Setup Tab Listeners
+      const tabs = document.querySelectorAll('#deptFilterTabs .tab-btn');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          currentDept = tab.getAttribute('data-dept');
+          renderFaculty();
+        });
+      });
+    });
+
+    function renderFaculty() {
+      renderFacultyMembers('facultyGrid', { dept: currentDept, query: currentSearch });
+    }
+
+    function resetFacultyFilters() {
+      currentDept = 'all';
+      currentSearch = '';
+      const searchInput = document.getElementById('facultySearchInput');
+      if (searchInput) searchInput.value = '';
+      document.querySelectorAll('#deptFilterTabs .tab-btn').forEach((t, i) => {
+        if (i === 0) t.classList.add('active');
+        else t.classList.remove('active');
+      });
+      renderFaculty();
+    }
+    window.resetFacultyFilters = resetFacultyFilters;
+  </script>
+</body>
+</html>
